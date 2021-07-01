@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+body {
+    background: #f4f4f4;
+    font-family: '微软雅黑';
+}
+.stampManageBox {
+    margin: 40px;
+    background: #ffffff;
+}
+.stampTabs {
+    height: 50px;
+    margin-left: 20px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.stampTabs .active {
+    color: #cd210f;
+}
+.stampTabs .active::after {
+    content: '';
+    width: 60%;
+    height: 1px;
+    display: block;
+    margin: 0 auto;
+    border-bottom: 2px solid #cd210f;
+}
+.stampTab {
+    list-style: none;
+    font-size: 14px;
+    float: left;
+    line-height: 50px;
+    margin: 0 28px;
+    color: #3a3a3a;
+    cursor: pointer;
+}
+.sealItem {
+    float: left;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.16);
+    border-radius: 5px;
+    border-radius: 5px;
+    margin-top: 30px;
+    height: 300px;
+    text-align: center;
+    position: relative;
+}
+.sealImgBox {
+    height: 165px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.sealImg {
+    max-width: 145px;
+    max-height: 145px;
+}
+.sealText {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.stampManageContent {
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 1px;
+    display: flex;
+}
+.stampDelBtn {
+    width: 100px;
+    height: 36px;
+    text-align: center;
+    border: 1px solid #cd210f;
+    background: #ffffff;
+    color: #cd210f;
+    margin-right: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 2px;
+    outline: none;
+}
+.stampDetailBtn {
+    border: 1px solid #cd210f;
+    width: 100px;
+    height: 36px;
+    text-align: center;
+    color: #fff;
+    background: #cd210f;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 2px;
+    outline: none;
+}
+.stampDetailBtn a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+}
+.sealText {
+    margin: 0 auto;
+    text-align: left;
+    line-height: 29px;
+    font-size: 14px;
+    color: #333333;
+}
+.keyValModal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+}
+.keyValContent {
+    position: fixed;
+    width: 274px;
+    height: 162px;
+    left: 50%;
+    top: 50%;
+    background: #ffffff;
+    margin-left: -137px;
+    margin-top: -81px;
+    z-index: 99;
+}
+.keyValContent h1 {
+    box-sizing: border-box;
+    width: 274px;
+    height: 42px;
+    line-height: 42px;
+    padding: 0 80px 0 20px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    color: #333333;
+    background: #f8f8f8;
+}
+.keyValClose {
+    position: absolute;
+    top: 0;
+    right: -20px;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.keyVal {
+    display: block;
+    width: 230px;
+    height: 36px;
+    margin: 20px auto;
+    line-height: 30px;
+    padding-left: 10px;
+    border: 1px solid #e6e6e6;
+    color: #333;
+}
+.keyBtn {
+    text-align: right;
+    padding-right: 16px;
+}
+.keyBtn button {
+    box-sizing: border-box;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 15px;
+    border: 1px solid #dedede;
+    border-radius: 2px;
+    /* color: #333333; */
+    outline: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+.keyBtnSub {
+    background: #1e9fff;
+    color: #ffffff;
+}
+.keyBtnCancel {
+    background: #ffffff;
+}
+.keyValModal {
+    display: none;
+}
+/* 新版本印章管理 */
+
+.stampManageLeft {
+    position: relative;
+    min-height: 688px;
+    width: 300px;
+    background: #ffffff;
+    margin: 40px 30px 40px 40px;
+    float: left;
+}
+.stampManageRight {
+    margin: 40px 40px 40px 0;
+    background: #ffffff;
+    min-height: 688px;
+    float: left;
+}
+.keyTitle {
+    width: 100%;
+    margin-bottom: 12px;
+}
+.keyMsgTitle {
+    margin-bottom: 10px;
+}
+.homeH2 {
+    position: relative;
+    display: block;
+    font-size: 14px;
+    width: 260px;
+    margin: 0 auto;
+    color: #333333;
+    letter-spacing: 0;
+    text-align: left;
+    padding: 15px 0;
+    border-radius: 5px;
+    border-bottom: 1px solid #eeeeee;
+}
+.homeH2::before {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 20px;
+    background: #cd210f;
+    float: left;
+    margin-right: 10px;
+}
+.half {
+    display: inline-block;
+    width: 50%;
+    line-height: 32px;
+    font-size: 14px;
+}
+.half:nth-child(odd) {
+    text-indent: 15px;
+}
+.sealName {
+    height: 40px;
+    text-indent: 20px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #333333;
+    line-height: 40px;
+    word-break: keep-all; /* 不换行 */
+    white-space: nowrap; /* 不换行 */
+    overflow: hidden; /* 内容超出宽度时隐藏超出部分的内容 */
+    text-overflow: ellipsis; /* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+}
+
+.keyContentRight {
+    font-size: 14px;
+    color: #333333;
+    line-height: 18px;
+}
+.keyContentRight {
+    margin-left: 14px;
+}
+.keyContentRight img {
+    width: 10px;
+    height: 18px;
+    margin-top: 0;
+    float: left;
+    margin-right: 10px;
+}
+.keyContentDivContainer {
+    height: 37px;
+}
+.refBtn {
+    position: absolute;
+    width: 260px;
+    height: 33px;
+    border: 1px solid #cd210f;
+    border-radius: 5px;
+    border-radius: 5px;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -130px;
+    color: #cd210f;
+    background: #ffffff;
+    outline: none;
+    cursor: pointer;
+}
+
+.floatPng1 {
+    width: 125px;
+    height: 121px;
+    position: absolute;
+    right: -25px;
+    top: -30px;
+    background-size: 100% 100%;
+    background: url(../img/examineSuccess.png);
+}
+.floatPng2 {
+    width: 125px;
+    height: 121px;
+    position: absolute;
+    right: -25px;
+    top: -30px;
+    background-size: 100% 100%;
+    background: url(../img/examineWarning.png);
+}
+.floatPng3 {
+    width: 125px;
+    height: 121px;
+    position: absolute;
+    right: -25px;
+    top: -30px;
+    background-size: 100% 100%;
+    background: url(../img/examineSuccess.png);
+}
+.floatPng4 {
+    width: 125px;
+    height: 121px;
+    position: absolute;
+    right: -25px;
+    top: -30px;
+    background-size: 100% 100%;
+    background: url(../img/examineWarning.png);
+}

@@ -1,0 +1,31 @@
+/* ==========================================================
+ * index.css v20141101
+ * ==========================================================
+ * Copyright 石华
+ *
+ * 三国杀传奇递推页css
+ * ========================================================== */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.role {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;/* px */
+  margin: 10px;
+}
+.role-1 {
+  overflow: hidden;
+  width: 400px;
+  height: 350px;
+  margin: 5px 8px 0 6px;
+  background-color: #1b0c35;
+}
+
+.role-1 span {
+  font-size: 12px;/* px */
+  line-height: 27px;
+  color: #fff;
+}

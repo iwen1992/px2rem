@@ -1,0 +1,665 @@
+* {
+  font-family: '微软雅黑';
+  font-size: 0.14rem;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #f4f4f4;
+  font-family: '微软雅黑';
+}
+
+input {
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.applyFormLeft {
+  float: left;
+  width: 50%;
+}
+
+.applyFormRight {
+  float: left;
+  width: 50%;
+}
+
+.applyTitle {
+  font-size: 0.14rem;
+  color: #333333;
+  font-weight: bold;
+  display: block;
+  height: 0.22rem;
+  margin: 0.2rem 0;
+}
+
+.formItem {
+  width: 3.94rem;
+  height: 0.32rem;
+  margin-bottom: 0.2rem;
+  display: block;
+  position: relative;
+}
+
+.formLabel {
+  float: left;
+  width: 1.14rem;
+  text-align: right;
+  line-height: 0.32rem;
+}
+
+.formCert {
+  float: left;
+}
+
+.formInput {
+  float: left;
+  width: 2.6rem;
+  border: 0.01rem solid #e5e5e5;
+  margin-left: 0rem;
+  height: 0.32rem;
+}
+
+.inputW {
+  width: 0.6rem;
+  border: 0.01rem solid #eeeeee;
+}
+
+.inputW:nth-of-type(3) {
+  width: 0.24rem;
+}
+
+.formGroupInput {
+  width: 1.76rem;
+  border-right: 0;
+}
+
+.formInputLabel {
+  float: left;
+  width: 0.84rem;
+  height: 0.32rem;
+  line-height: 0.32rem;
+  border: 0.01rem solid #e5e5e5;
+  border-left: 0;
+  padding-left: 0.01rem;
+  color: #cd210f;
+  cursor: pointer;
+}
+
+.stampType {
+  width: 0.64rem;
+}
+
+input[type='radio'] {
+  background: white;
+  outline: none;
+  border: 0.01rem solid #ccc;
+  height: 0.3rem;
+  line-height: 0.3rem;
+  margin: 0.1rem 0rem 0.1rem 0.2rem;
+  text-indent: 0.1rem;
+}
+
+input[type='radio'] + label {
+  position: relative;
+  padding-left: 0.35rem;
+}
+
+input[type='radio'] + label::before {
+  content: '\a0';
+  /*不换行空格*/
+  display: inline-block;
+  position: absolute;
+  left: 0rem;
+  top: 0.03rem;
+  /* vertical-align: middle; */
+  margin-left: 0.15rem;
+  font-size: 0.14rem;
+  width: 1em;
+  height: 1em;
+  margin-right: 0.4em;
+  border-radius: 50%;
+  /* border: 2px solid #f07464; */
+  background: url('../../settingIcon/noselected.png');
+  background-size: 100% 100%;
+  text-indent: 0.15em;
+  line-height: 1;
+}
+
+input[type='radio']:checked + label::before {
+  background: url('../../settingIcon/selected.png') no-repeat;
+  background-size: 100% 100%;
+  /* background-clip: content-box;
+    background: url(../images/select.png)no-repeat center  #f07464; */
+}
+
+input[type='radio'] {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+.stampModelDetail {
+  margin-bottom: 0.2rem;
+}
+
+.stampModelUploadBtn {
+  width: 0.8rem;
+  height: 0.24rem;
+  border: 0.01rem solid #eeeeee;
+  background: rgba(0, 0, 0, 0);
+  font-size: 0.12rem;
+  color: #666666;
+  line-height: 0.24rem;
+  outline: none;
+}
+
+.stampView {
+  height: 3.52rem;
+}
+
+.stampBox img {
+  max-width: 3rem;
+  max-height: 3rem;
+}
+
+.applyPage {
+  box-sizing: border-box;
+  padding: 0 0.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.form_title {
+  font-size: 0.14rem;
+  color: #333333;
+  text-align: left;
+  height: 0.55rem;
+  line-height: 0.55rem;
+  border-bottom: 0.01rem solid #e5e5e5;
+  margin-bottom: 0.14rem;
+}
+
+.applyBtnBox {
+  height: 1.1rem;
+  background: #ffffff;
+  text-align: center;
+}
+
+.applyBtn {
+  width: 1.33rem;
+  height: 0.36rem;
+  color: #ffffff;
+  border: none;
+  background: #cd210f;
+  margin-top: 0.4rem;
+}
+
+/* 步骤条 */
+
+.applyStepBox {
+  width: 100%;
+  height: 0.36rem;
+  margin-bottom: 0.4rem;
+  margin-top: 0.3rem;
+}
+
+.applyStep {
+  width: 8rem;
+  margin: 0 auto;
+}
+
+.circleSmall {
+  width: 0.28rem;
+  height: 0.28rem;
+  background: #cd210f;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 0.28rem;
+  color: #ffffff;
+  position: absolute;
+  top: 0.04rem;
+  left: 0.04rem;
+}
+
+.circleBig {
+  width: 0.36rem;
+  height: 0.36rem;
+  background: #f0f0f0;
+  border-radius: 50%;
+  display: block;
+  position: relative;
+}
+
+.step1 .circleBig::before {
+  position: absolute;
+  content: '填写材料';
+  width: 0.56rem;
+  height: 0.2rem;
+  line-height: 0.2rem;
+  top: 0.36rem;
+  left: -0.1rem;
+}
+
+.step2 .circleBig::before {
+  position: absolute;
+  content: '审核中';
+  width: 0.42rem;
+  height: 0.2rem;
+  font-size: 0.14rem;
+  line-height: 0.2rem;
+  top: 0.36rem;
+  left: -0.03rem;
+}
+
+.step3 .circleBig::before {
+  position: absolute;
+  content: '制章';
+  width: 0.28rem;
+  height: 0.2rem;
+  font-size: 0.14rem;
+  line-height: 0.2rem;
+  top: 0.36rem;
+  left: 0.04rem;
+}
+
+.circleBefore::before {
+  color: #ffffff;
+}
+
+.step {
+  width: 3.7rem;
+  height: 0.36rem;
+  display: inline-block;
+  position: relative;
+}
+
+.step3 {
+  width: 0.36rem;
+}
+
+.stepLine {
+  position: absolute;
+  width: 1.71rem;
+  height: 0.06rem;
+  background: #f0f0f0;
+  z-index: 999;
+  top: 0.15rem;
+}
+
+.step1line {
+  left: 0.32rem;
+  background: #cd210f;
+}
+
+.step2lineLeft {
+  left: -1.71rem;
+  width: 1.75rem;
+}
+
+.step2lineRight {
+  left: 0.32rem;
+}
+
+.step3line {
+  left: -1.71rem;
+  width: 1.75rem;
+}
+
+.stampBox {
+  width: 3rem;
+  height: 3rem;
+  border: 0.01rem solid #d5d5d5;
+  margin: 0.18rem auto 0.36rem auto;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* 选择密钥盘modal */
+
+.keyModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+.keyModalContent {
+  width: 4rem;
+  /* height: 200px; */
+  background: #ffffff;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -2rem;
+  margin-top: -1rem;
+}
+
+.keyModalBody {
+  padding: 0.1rem;
+}
+
+.keyModalTitle {
+  height: 0.4rem;
+  position: relative;
+  line-height: 0.4rem;
+  border-bottom: 0.01rem solid #f4f4f4;
+}
+
+.close {
+  position: absolute;
+  width: 0.2rem;
+  height: 0.2rem;
+  /* top: 10px; */
+  right: 0.1rem;
+  cursor: pointer;
+}
+
+.keyModalFooter {
+  height: 0.6rem;
+  text-align: right;
+}
+
+.primary-btn {
+  width: 0.8rem;
+  height: 0.36rem;
+  border: none;
+  color: #ffffff;
+  border-radius: 0.05rem;
+  background: #cd210f;
+  cursor: pointer;
+  outline: none;
+  margin-top: 0.1rem;
+}
+
+.cancel-btn {
+  width: 0.8rem;
+  height: 0.36rem;
+  border: none;
+  color: #ffffff;
+  border-radius: 0.05rem;
+  background: #cd210f;
+  cursor: pointer;
+  outline: none;
+  margin-top: 0.1rem;
+  margin-right: 0.1rem;
+}
+
+/* 选择单位 */
+
+.cascader-dropdown {
+  position: absolute;
+  top: 0.36rem;
+  left: 1.15rem;
+  z-index: 99;
+  margin: 0.05rem 0;
+  font-size: 0.14rem;
+  width: 10rem;
+}
+
+/* .cascader-panel {
+    position: absolute;
+    top: 36px;
+    left: 115px;
+    z-index: 99;
+    margin: 5px 0;
+    font-size: 14px;
+    background: white;
+    border: 1px solid #e4e7ed;
+    border-radius: 4px;
+    box-shadow: 0 2px 12px 0;
+} */
+
+.cascader-menu {
+  min-width: 1.8rem;
+  height: 2.04rem;
+  background: #fff;
+  border: 0.01rem solid #e4e7ed;
+  border-radius: 0.04rem;
+  box-shadow: 0 0.02rem 0.12rem 0 rgb(0 0 0 0.1);
+  overflow: auto;
+  /* display: inline-block; */
+  float: left;
+}
+
+.cascader-menu ul li {
+  list-style: none;
+  padding: 0 0.3rem 0 0.2rem;
+  height: 0.34rem;
+  line-height: 0.34rem;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.cascader-menu ul li::after {
+  content: '';
+  background: url(../img/right.png) no-repeat;
+  width: 0.16rem;
+  height: 0.16rem;
+  display: inline-block;
+  position: absolute;
+  right: 0.1rem;
+  top: 0.1rem;
+}
+
+.certBtn {
+  padding: 0.05rem 0.07rem;
+  background: #cd210f;
+  border: none;
+  color: #ffffff;
+  border-radius: 0.05rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.keyValModal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.keyValContent {
+  position: fixed;
+  width: 2.74rem;
+  height: 1.62rem;
+  left: 50%;
+  top: 50%;
+  background: #ffffff;
+  margin-left: -1.37rem;
+  margin-top: -0.81rem;
+  z-index: 99;
+}
+
+.keyValContent h1 {
+  box-sizing: border-box;
+  width: 2.74rem;
+  height: 0.42rem;
+  line-height: 0.42rem;
+  padding: 0 0.8rem 0 0.2rem;
+  border-bottom: 0.01rem solid #eee;
+  font-size: 0.14rem;
+  color: #333333;
+  background: #f8f8f8;
+}
+
+.keyValClose {
+  position: absolute;
+  top: 0;
+  right: -0.2rem;
+  width: 0.42rem;
+  height: 0.42rem;
+  line-height: 0.42rem;
+  cursor: pointer;
+  font-size: 0.14rem;
+}
+
+.keyVal {
+  display: block;
+  width: 2.3rem;
+  height: 0.36rem;
+  margin: 0.2rem auto;
+  line-height: 0.3rem;
+  padding-left: 0.1rem;
+  border: 0.01rem solid #e6e6e6;
+  color: #333;
+}
+
+.keyBtn {
+  text-align: right;
+  padding-right: 0.16rem;
+}
+
+.keyBtn button {
+  box-sizing: border-box;
+  height: 0.28rem;
+  line-height: 0.28rem;
+  padding: 0 0.15rem;
+  border: 0.01rem solid #dedede;
+  border-radius: 0.02rem;
+  /* color: #333333; */
+  outline: none;
+  font-size: 0.14rem;
+  cursor: pointer;
+}
+
+.keyBtnSub {
+  background: #1e9fff;
+  color: #ffffff;
+}
+
+.keyBtnCancel {
+  background: #ffffff;
+}
+
+.keyValModal {
+  display: none;
+}
+
+.certItem {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 0.08rem;
+}
+
+/* .certLabel {
+    min-height: 120px;
+} */
+
+/* 审核中 */
+
+.verify {
+  width: 100%;
+  text-align: center;
+}
+
+.verify h3 {
+  font-size: 0.14rem;
+  color: #252525;
+  letter-spacing: 0.00rem;
+  margin-bottom: 0.15rem;
+}
+
+.verify p {
+  font-size: 0.14rem;
+  color: #999999;
+  letter-spacing: 0.00rem;
+}
+
+.verify p:nth-of-type(1) {
+  margin-bottom: 0.1rem;
+}
+
+.verify .previewBtnGroup {
+  margin-top: 0.7rem;
+}
+
+.verify a {
+  display: block;
+  background: #cd210f;
+  font-size: 0.14rem;
+  width: 1.33rem;
+  height: 0.36rem;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  line-height: 0.36rem;
+  margin: 0 auto;
+  text-decoration: none;
+  /* border-radius: 4px; */
+}
+
+.verify-img {
+  width: 100%;
+  height: 1.47rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.39rem;
+}
+
+.verifyImg {
+  background: url(../img/verifyImg.png) no-repeat;
+  width: 1.03rem;
+  height: 1.47rem;
+  background-size: 100% 100%;
+  margin: 0 auto;
+}
+
+.step3Page {
+  width: 8.52rem;
+  margin: 0 auto;
+}
+
+.step3PageLeft {
+  width: 50%;
+  float: left;
+  margin-top: 0.58rem;
+}
+
+.step3PageRight {
+  width: 50%;
+  float: left;
+  margin-top: 0.58rem;
+}
+
+.step3PageRightTitle,
+.step3PageLeftTitle {
+  font-size: 0.14rem;
+  color: #000000;
+  font-weight: bold;
+}
+
+.step3Row {
+  line-height: 0.2rem;
+  margin: 0.13rem 0;
+  font-size: 0.14rem;
+}
+
+.makeSealGroup {
+  width: 100%;
+  text-align: center;
+}
+
+.makeSealBtn {
+  width: 1.33rem;
+  height: 0.36rem;
+  color: #ffffff;
+  line-height: 0.36rem;
+  background: #cd210f;
+  text-align: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-top: 0.99rem;
+}
