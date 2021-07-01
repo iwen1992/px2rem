@@ -51,12 +51,20 @@ rem自适应布局原理可以自行检索或参考[我的博文](http://www.shi
 
 2、在页面加载时，我们可以根据设备实际的宽度与设计稿的比值，动态的去设置rem的值：
 ```javascript
-  var pxUnit = 100;     // 在px2rem中预设rem的值 即 1rem = ? px
-  var designWid = 750;  // 设计稿宽度
-  var winWid = document.body.clientWidth;
-  var winHei = document.body.clientHeight;
-  var bl = winWid / designWid;
-  document.querySelector('html').style.fontSize = (bl * pxUnit) + 'px';
+  function setRem(){
+    var pxUnit = 100;     // 在px2rem中预设rem的值 即 1rem = ? px
+    var designWid = 1400;  // 设计稿宽度
+    var winWid = document.body.clientWidth;
+    var winHei = document.body.clientHeight;
+    var bl = winWid / designWid;
+    if(winWid<designWid){
+        document.querySelector('html').style.fontSize = pxUnit + 'px';
+    }else{
+        document.querySelector('html').style.fontSize = (bl * pxUnit) + 'px';
+    }
+    
+}
+setRem()
 ```
 
 3、针对ios视网膜屏幕1px边框的问题（1px hairline），可以采用某宝的方案，**在设置字体大小之前**，根据屏幕像素比，更改页面的viewport：
@@ -68,3 +76,7 @@ var sc = 1 / window.devicePixelRatio;
 document.getElementsByName('viewport')[0].content = 'initial-scale='+ sc +', maximum-scale='+ sc +', minimum-scale='+ sc +', user-scalable=no';
 }
 ```
+4、node v10以下版本启动
+5、node v8.0安装包
+链接：https://pan.baidu.com/s/1uFbuDqDKgnwCucRC33Ymkg 
+提取码：8eb2
